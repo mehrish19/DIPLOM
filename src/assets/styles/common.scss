@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  // aspect-ratio: 1/1;
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+button,
+input,
+textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+section {
+  padding-top: 60px;
+}
+
+body {
+  background-color: #FFDBE1;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+// nav
+.nav {
+  &__content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: 140px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+  }
+
+  &__link {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: bold;
+    font-size: 24px;
+    color: #3a4750;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link-debit {
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 600px;
+  }
+
+}
+
+// nav
+
+// card
+
+.card {
+  box-shadow: 0 0 5px #e62143;
+  ;
+  height: 100%;
+  width: 270px;
+  color: #303841;
+  padding: 20px;
+  border-radius: 15px;
+  display: grid;
+  flex-wrap: wrap;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: attr(data-count);
+    font-size: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #e62143;
+    font-family: cursive;
+    z-index: 1;
+    background: #3a4750;
+    opacity: 0.8;
+    border-bottom-left-radius: 4rem;
+    border-top-right-radius: 2rem;
+    max-width: 100px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__img {
+    aspect-ratio: 1/1;
+    mix-blend-mode: darken;
+    object-fit: contain;
+  }
+
+  &__price {
+    display: inline-block;
+
+    width: max-content;
+    height: 38px;
+
+    background-color: #3a4750;
+    -webkit-border-radius: 3px 4px 4px 3px;
+    -moz-border-radius: 3px 4px 4px 3px;
+    border-radius: 3px 4px 4px 3px;
+
+    border-left: 1px solid #3a4750;
+
+    /* This makes room for the triangle */
+    margin-left: 19px;
+
+    position: relative;
+
+    color: white;
+    line-height: 38px;
+
+    padding: 0 10px 0 10px;
+  }
+
+  /* Makes the triangle */
+  &__price:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -19px;
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-right: 19px solid #3a4750;
+  }
+
+  /* Makes the circle */
+  &__price:after {
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: -9px;
+    top: 17px;
+  }
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+// card
+
+// info
+.info {
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__card {
+    margin: 50px auto;
+    box-shadow: 0 0 5px #e62143;
+    ;
+    height: 100%;
+    width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    overflow: hidden;
+  }
+
+  &__img {
+    max-width: 300px;
+    width: 100%;
+    // aspect-ratio: 1/1;
+    mix-blend-mode: darken;
+  }
+
+  &__name {
+    color: #303841;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 600px;
+  }
+
+  &__rating {
+    color: #303841;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 40px;
+  }
+
+  &__price {
+    display: inline-block;
+
+    width: max-content;
+    height: 38px;
+
+    background-color: #3a4750;
+    -webkit-border-radius: 3px 4px 4px 3px;
+    -moz-border-radius: 3px 4px 4px 3px;
+    border-radius: 3px 4px 4px 3px;
+
+    border-left: 1px solid #3a4750;
+
+    /* This makes room for the triangle */
+    margin-left: 19px;
+
+    position: relative;
+
+    color: white;
+    line-height: 38px;
+
+    padding: 0 10px 0 10px;
+  }
+
+  /* Makes the triangle */
+  &__price:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -19px;
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid transparent;
+    border-right: 19px solid #3a4750;
+  }
+
+  /* Makes the circle */
+  &__price:after {
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    display: block;
+    position: absolute;
+    left: -9px;
+    top: 17px;
+  }
+
+  &__description {
+    color: #303841;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 600px;
+    font-style: italic;
+  }
+
+}
+
+// info
+
+// cartpage
+.table {
+  padding: 30px;
+  margin: 30px;
+  max-width: 150dvh;
+  border-radius: 5px;
+  border: 1px solid #303841;
+  box-shadow: 0 0 5px #e62143;
+  color: #303841;
+  border-radius: 15px;
+  display: grid;
+  flex-wrap: wrap;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+
+
+  &__body {
+    border-color: #d3d6db;
+  }
+
+  &__list {
+    color: #303841;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    border: 1px solid #e62143;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 350px;
+    width: 100%;
+  }
+
+  &__img {
+    max-width: 100px;
+    width: 100%;
+  }
+
+  &__price {
+    text-align: center;
+    border: 1px solid #e62143;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 80px;
+    width: 100%;
+  }
+
+  .button {
+    text-align: center;
+    border: 1px solid #e62143;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 50px;
+    width: 100%;
+  }
+
+  &__name {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: bold;
+    font-size: 24px;
+    color: #3a4750;
+  }
+}
+
+// cartpage
+
+// notfound
+.error {
+  background-color: #FFDBE1;
+  min-height: 100dvh;
+
+  &__info {
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__title {
+    font-family: serif;
+    font-style: bold;
+    font-size: 64px;
+    color: #3a4750;
+  }
+
+  &__sub {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: bold;
+    font-size: 24px;
+    color: #3a4750;
+  }
+
+  &__img {
+    min-height: 40dvh;
+    display: grid;
+    place-items: center;
+    // font-size: 6vw; 
+  }
+}
+
+// notfound
+
+// contact
+.contact {
+  &__content {
+    min-height: 80dvh;
+    display: grid;
+    place-items: center;
+  }
+
+  &__form {
+    display: grid;
+    gap: 12px;
+    max-width: 300px;
+    width: 100%;
+  }
+
+  &__title {
+    color: #303841;
+    font-size: 24px;
+  }
+
+  &__btn {
+    padding: 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #3a4750;
+    border: 1px solid #3a4750;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  &__input {
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #3a4750;
+    border-radius: 5px;
+  }
+
+}
+
+// contact

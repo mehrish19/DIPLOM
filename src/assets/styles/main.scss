@@ -1,0 +1,58 @@
+@import "common.scss";
+
+.products {
+  &__title {
+    font-size: 42px;
+    text-align: center;
+    color: #303841;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 255px));
+    gap: 30px;
+  }
+
+  &__input {
+    max-width: 300px;
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 4px;
+    border: 2px solid #333;
+    font-size: 16px;
+    margin: 30px auto;
+    display: block;
+  }
+
+  &__paginate {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+
+    .paginate-buttons {
+      height: 40px;
+      width: 40px;
+      border-radius: 4px;
+      cursor: pointer;
+      background-color: rgb(242, 242, 242);
+      border: 1px solid rgb(217, 217, 217);
+      color: #3a4750;
+    }
+
+    .paginate-buttons:hover {
+      background-color: #d8d8d8;
+      transition: 0.3s;
+    }
+
+    .active-page {
+      background-color: #3a4750;
+      border: 1px solid #3a4750;
+      color: white;
+    }
+
+    .active-page:hover {
+      background-color: #be3144;
+    }
+  }
+}
+
