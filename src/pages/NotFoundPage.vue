@@ -1,6 +1,5 @@
 <script setup>
 import HomeIcon from "@/components/icons/HomeIcon.vue";
-import Navbar from "../components/nav/Navbar.vue";
 
 </script>
 
@@ -9,7 +8,6 @@ import Navbar from "../components/nav/Navbar.vue";
     <div class="error">
         <div class="container">
             <div class="error__content">
-                <Navbar />
                 <div class="error__info">
                     <div class="error__left">
                         <h2 class="error__title">OOOPS ...</h2>

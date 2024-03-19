@@ -1,6 +1,5 @@
 <script setup>
 import { useProductsStore } from "@/stores/productsStore";
-import Navbar from "@/components/nav/Navbar.vue";
 const productsStore = useProductsStore();
 
 </script>
@@ -9,7 +8,6 @@ const productsStore = useProductsStore();
   <div class="table__page">
     <div class="container">
       <div class="table__body">
-        <Navbar />
         <div class="table">
           <div class="table__empty" v-if="!productsStore.cartItems.length">
             <h2>empty...</h2>

@@ -20,7 +20,7 @@ export const useProductsStore = defineStore('products', {
         const res = await apiProducts.getProducts(limit, skip, search);
         this.products = res.products
         this.total = res.total
-        console.log(res);
+        // console.log(res);
       } catch (error) {
         console.error(error);
       }

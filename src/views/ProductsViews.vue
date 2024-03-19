@@ -27,7 +27,7 @@ function onClickHandler(page) {
   productsStore.getProducts(12, page * 12 - 12, search.value);
 }
 
-const paginatePage = Math.ceil(productsStore.total / 12);
+const paginatePage = Math.ceil(100 / 12);
 if (currentPage.value > paginatePage) { router.push("/error") }
 
 watch(

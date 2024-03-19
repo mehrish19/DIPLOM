@@ -1,5 +1,4 @@
 <script setup>
-import Navbar from "@/components/nav/Navbar.vue";
 // import Button from "../components/UI/Button.vue";
 import { ref } from 'vue';
 
@@ -32,7 +31,6 @@ const sendToTelegram = () => {
   <div class="contact">
     <div class="container">
       <div class="contact__content">
-        <Navbar />
         <h2 class="contact__title">Registration</h2>
         <form action="" class="contact__form" @submit.prevent="sendToTelegram">
           <input class="contact__input" type="text" required v-model="userName" placeholder="Your Name">
